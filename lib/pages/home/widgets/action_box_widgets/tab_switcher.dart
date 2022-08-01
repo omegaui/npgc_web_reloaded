@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:npgc_web_reloaded/pages/home/widgets/action_box_widgets/tab_switcher_widgets/tab_button.dart';
 import 'package:npgc_web_reloaded/widgets/top_panel_widgets/tab_data.dart';
 
+import '../../home_page.dart';
+
 class TabSwitcher extends StatefulWidget {
   const TabSwitcher({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class TabSwitcher extends StatefulWidget {
 class _TabSwitcherState extends State<TabSwitcher> {
   List<TabData> tabs = [
     TabData("Courses", imageUrl: "https://img.icons8.com/external-flaticons-flat-flat-icons/32/000000/external-course-university-flaticons-flat-flat-icons-3.png"),
-    TabData("Services", imageUrl: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-course-university-flaticons-flat-flat-icons-3.png"),
+    TabData("Services", imageUrl: "https://img.icons8.com/external-flaticons-flat-flat-icons/32/000000/external-services-inhome-service-flaticons-flat-flat-icons.png"),
   ];
 
   int selectedIndex = 0;
@@ -21,6 +23,7 @@ class _TabSwitcherState extends State<TabSwitcher> {
     setState(() {
       selectedIndex = index;
     });
+    actionBoxKey.currentState?.setSelectedIndex(selectedIndex);
   }
 
   @override

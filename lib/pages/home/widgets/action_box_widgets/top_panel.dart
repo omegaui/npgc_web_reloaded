@@ -14,7 +14,18 @@ class TopPanel extends StatelessWidget{
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-
+              Material(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: IconButton(
+                    tooltip: "Contact us",
+                    onPressed: () {},
+                    icon: Image.network('https://img.icons8.com/cotton/64/000000/contact-card.png'),
+                    iconSize: 32,
+                    splashRadius: 28,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

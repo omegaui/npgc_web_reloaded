@@ -47,7 +47,7 @@ class _TabButtonState extends State<TabButton> {
         onEnter: onMouseEnter,
         onExit: onMouseExit,
         child: Container(
-          height: 65,
+          height: 50,
           decoration: BoxDecoration(
             color: mouseInside
                 ? (widget.active

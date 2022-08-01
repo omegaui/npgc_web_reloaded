@@ -10,6 +10,15 @@ class HoverPanel extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         HoverButton(
+          tooltip: "Admissions",
+          imageUrl:
+              'https://img.icons8.com/external-febrian-hidayat-flat-febrian-hidayat/50/000000/external-04-school-and-education-febrian-hidayat-flat-febrian-hidayat.png',
+          backgroundColor: Colors.white,
+          hoverColor: Colors.grey,
+          onPressed: () {},
+        ),
+        const SizedBox(height: 15),
+        HoverButton(
           tooltip: "About Our Library",
           imageUrl:
               'https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/50/000000/external-library-public-service-photo3ideastudio-flat-photo3ideastudio.png',

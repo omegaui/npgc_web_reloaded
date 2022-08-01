@@ -45,7 +45,7 @@ class TopPanel extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Text(
-                "NAAC 'A'",
+                "NAAC 'A', CPE",
                 style: TextStyle(
                   color: Colors.grey.shade700,
                   fontWeight: FontWeight.w600,
