@@ -60,9 +60,9 @@ class _TabButtonState extends State<TabButton> {
               child: Text(
                 widget.active ? widget.name.toUpperCase() : widget.name,
                 style: TextStyle(
-                  color: widget.active ? Colors.black : Colors.grey.shade600,
-                  fontWeight: widget.active ? FontWeight.w800 : FontWeight.w600,
-                  fontSize: widget.active ? 14 : 16,
+                  color: widget.active ? Colors.grey.shade800 : Colors.grey.shade600,
+                  fontWeight: widget.active ? FontWeight.w900 : FontWeight.w600,
+                  fontSize: widget.active ? 12 : 16,
                 ),
               ),
             ),

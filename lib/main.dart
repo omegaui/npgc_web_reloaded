@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:npgc_web_reloaded/pages/home/home_page.dart';
 import 'package:npgc_web_reloaded/widgets/hover_panel.dart';
 import 'package:npgc_web_reloaded/widgets/social_panel.dart';
@@ -45,30 +46,33 @@ class ContentPane extends StatelessWidget {
               child: Image.network('https://img.icons8.com/external-wanicon-flat-wanicon/80/000000/external-india-flag-diwali-wanicon-flat-wanicon.png'),
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              TopPanel(),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: HomePage(),
-              ),
-            ],
+          SingleChildScrollView(
+            primary: true,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                TopPanel(),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: HomePage(),
+                ),
+              ],
+            ),
           ),
           const Align(
             alignment: Alignment.bottomRight,
             child: Padding(
               padding: EdgeInsets.all(40),
               child: SizedBox(
-                width: 50,
+                width: 60,
                 child: HoverPanel(),
               ),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
               child: SocialPanel(),
             ),
           ),

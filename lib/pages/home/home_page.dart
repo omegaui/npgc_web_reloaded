@@ -4,6 +4,8 @@ import 'package:npgc_web_reloaded/pages/home/widgets/home_page_artwork.dart';
 import 'package:npgc_web_reloaded/pages/home/widgets/tag_line.dart';
 
 final GlobalKey<ActionBoxState> actionBoxKey = GlobalKey();
+//Color(0xFF8F00FF), Colors.indigo, Colors.blue, Colors.green, Colors.orange, Colors.red
+//Colors.red, Colors.orange, Colors.green, Colors.blue, Colors.indigo, Color(0xFF8F00FF)
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -110,9 +112,9 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
                   child: Container(
-                    width: MediaQuery.of(context).size.width - 100,
+                    width: MediaQuery.of(context).size.width,
                     height: 350,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -215,6 +217,7 @@ class HomePage extends StatelessWidget {
                                     ),
                                     const SizedBox(height: 25),
                                     TextButton(
+                                      style: TextButton.styleFrom(primary: Colors.yellow),
                                       onPressed: () {},
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -249,79 +252,250 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width/4 - 100,
-                      height: 330,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(colors: [Colors.deepOrange, Colors.redAccent]),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.4),
-                            spreadRadius: 6,
-                            blurRadius: 6,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 10),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Image.network('https://img.icons8.com/external-flatart-icons-flat-flatarticons/85/000000/external-newspaper-morning-routine-flatart-icons-flat-flatarticons-1.png'),
-                              const Text(
-                                "Admissions at a glance",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 360,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 6,
+                          blurRadius: 6,
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 40),
-                    Container(
-                      width: MediaQuery.of(context).size.width/4 - 100,
-                      height: 330,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(colors: [Colors.redAccent, Colors.deepOrange]),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.4),
-                            spreadRadius: 6,
-                            blurRadius: 6,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 10),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Text(
-                                "Students Corner",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            const SizedBox(width: 30),
+                            Image.network('https://img.icons8.com/fluency/24/000000/link.png'),
+                            const Text(
+                              "Quick Links",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w800,
                               ),
-                              Image.network('https://img.icons8.com/external-itim2101-lineal-color-itim2101/85/000000/external-student-online-learning-itim2101-lineal-color-itim2101.png'),
-                            ],
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "Admissions at a Glance",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 26,
                           ),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(height: 5),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.4),
+                                  spreadRadius: 6,
+                                  blurRadius: 6,
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                const SizedBox(width: 40),
+                                Image.network('https://img.icons8.com/external-sbts2018-flat-sbts2018/58/000000/external-join-basic-ui-elements-2.4-sbts2018-flat-sbts2018.png'),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Information Bulletin",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Schedule",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Criteria",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Eligibility",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Procedure",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Seats Offered",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.red),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Apply Now",
+                                    style: TextStyle(
+                                      color: Colors.red.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 25),
+                        Text(
+                          "Students Corner",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 26,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.4),
+                                  spreadRadius: 6,
+                                  blurRadius: 6,
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                const SizedBox(width: 30),
+                                Image.network('https://img.icons8.com/external-others-cattaleeya-thongsriphong/64/000000/external-students-back-to-school-color-line-others-cattaleeya-thongsriphong.png'),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Results",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Examination Date-Sheet",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Examination Form",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.blue),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Syllabus",
+                                    style: TextStyle(
+                                      color: Colors.blue.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.grey),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Online Study",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(primary: Colors.deepOrange),
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Placements",
+                                    style: TextStyle(
+                                      color: Colors.deepOrange.shade700,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ],
             ),
