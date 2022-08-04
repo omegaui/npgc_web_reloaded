@@ -15,10 +15,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      // theme: ThemeData(
+      //   textTheme: GoogleFonts.robotoTextTheme(),
+      // ),
       debugShowCheckedModeBanner: false,
       color: Colors.white,
-      home: Scaffold(
+      home: const Scaffold(
         body: ContentPane(),
         backgroundColor: Colors.white,
       ),

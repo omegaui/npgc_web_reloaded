@@ -1,8 +1,27 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:npgc_web_reloaded/widgets/top_panel_widgets/tab_switcher.dart';
 
 class TopPanel extends StatelessWidget {
   const TopPanel({Key? key}) : super(key: key);
+
+  void showExploreMenu(BuildContext context){
+    showMenu(
+      context: context,
+      position: RelativeRect.fromLTRB(MediaQuery.of(context).size.width/2, 100, 350, 100),
+      items: [
+        PopupMenuItem(
+          child: Text(
+            "Home",
+            style: TextStyle(
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +112,9 @@ class TopPanel extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: IconButton(
                     tooltip: "Explore More",
-                    onPressed: () {},
+                    onPressed: () {
+                      showExploreMenu(context);
+                    },
                     icon: Icon(
                       Icons.menu,
                       color: Colors.grey.shade600,
